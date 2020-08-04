@@ -50,7 +50,7 @@
        "slot"   "3"
 }
 ```
-4) Add store_custom_model.smx by downloading from this github.
+4) Add store_custom_model.smx by downloading from this github to addons/sourcemod/plugins folder.
 5) Restart server!
 
 What's different from [this](https://forums.alliedmods.net/showpost.php?p=2377630&postcount=80)?
