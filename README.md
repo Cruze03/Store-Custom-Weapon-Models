@@ -1,11 +1,11 @@
 # Store-Custom-Weapon-Models
 [e54385991](https://forums.alliedmods.net/member.php?u=235578) is the original author! I just added [kgns's weapons](https://github.com/kgns/weapons) support.
 
-## Requirement:
+## Requirements:
 * [First Person View Models](https://forums.alliedmods.net/showthread.php?t=276697)
 * [CS:GO Custom Weapon Options (Skins, NameTag, StatTrak, Wear/Float, Knives)](https://github.com/kgns/weapons) (Optional)
 
-## Installation:
+## Installations:
 1) Add the above requirement plugin(s) in your server.
 2) Add the following to addons/sourcemod/translations/store.phrases.txt
 ```
