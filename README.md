@@ -6,7 +6,7 @@
 * [CS:GO Custom Weapon Options (Skins, NameTag, StatTrak, Wear/Float, Knives)](https://github.com/kgns/weapons) (Optional)
 
 ## Installation:
-1) Add the above requirement plugin in your.
+1) Add the above requirement plugin in your server.
 2) Add the following to addons/sourcemod/translations/store.phrases.txt
 ```
 "CustomModel"
@@ -50,4 +50,5 @@
        "slot"   "3"
 }
 ```
-4) Restart server!
+4) Add store_custom_model.smx by downloading from this github.
+5) Restart server!
