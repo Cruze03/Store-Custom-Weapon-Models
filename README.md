@@ -52,3 +52,6 @@
 ```
 4) Add store_custom_model.smx by downloading from this github.
 5) Restart server!
+
+What's different from [this](https://forums.alliedmods.net/showpost.php?p=2377630&postcount=80)?
+When using e54385991's plugin + kgns plugin and player equip custom knife model along with !knife that is not default knife, all player's console gets spammed by a message (forgot the exact message lol). So this automatically sets player's knife to default when custom knife is equipped and doesn't allow player having custom knife model to use !knife.
