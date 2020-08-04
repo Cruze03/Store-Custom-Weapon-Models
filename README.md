@@ -1,5 +1,5 @@
 # Store-Custom-Weapon-Models
-[e54385991](https://forums.alliedmods.net/member.php?u=235578) is the original author! I just added [kgns's weapons](https://github.com/kgns/weapons) support
+[e54385991](https://forums.alliedmods.net/member.php?u=235578) is the original author! I just added [kgns's weapons](https://github.com/kgns/weapons) support.
 
 ## Requirement:
 * [First Person View Models](https://forums.alliedmods.net/showthread.php?t=276697)
@@ -55,3 +55,5 @@
 
 What's different from [this](https://forums.alliedmods.net/showpost.php?p=2377630&postcount=80)?
 When using e54385991's plugin + kgns plugin and player equip custom knife model along with !knife that is not default knife, all player's console gets spammed by a message (forgot the exact message lol). So this automatically sets player's knife to default when custom knife is equipped and doesn't allow player having custom knife model to use !knife.
+
+[Video Demonstration](https://youtu.be/L2WuwczQpzM)
