@@ -31,7 +31,7 @@ public Plugin myinfo =
 	name = "Store Custom Weapon Models",
 	author = "Mr.Derp & Franc1sco franug | Zephyrus Store Module & bbs.93x.net | KGNS Weapons Support & Cruze",
 	description = "Store Custom Weapon Models for specific weapon",
-	version = "3.1",
+	version = "3.1fix",
 	url = "http://bbs.93x.net | http://steamcommunity.com/profiles/76561198132924835"
 }
 
@@ -155,7 +155,7 @@ public int CustomModelEquip(int client, int id)
 {
 	int m_iData = Store_GetDataIndex(id);
 	g_iActive[client] = m_iData;
-	if(g_bWeapons)
+	if(g_bWeapons && strcmp(g_eCustomModel[m_iData][weaponentity], "weapon_knife") == 0)
 	{
 		char buffer[64];
 		Weapons_GetClientKnife(client, buffer, sizeof(buffer));
@@ -185,7 +185,7 @@ public int CustomModelRemove(int client, int id)
 		FPVMI_RemoveDropModelToClient(client, g_eCustomModel[m_iData][weaponentity]);
 	}
 	
-	if(g_bWeapons)
+	if(g_bWeapons && strcmp(g_eCustomModel[m_iData][weaponentity], "weapon_knife") == 0)
 	{
 		Weapons_RefreshClient(client);
 		char buffer[64];
