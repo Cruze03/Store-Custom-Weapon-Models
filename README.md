@@ -5,7 +5,7 @@
 * [First Person View Models](https://forums.alliedmods.net/showthread.php?t=276697)
 * [CS:GO Custom Weapon Options (Skins, NameTag, StatTrak, Wear/Float, Knives)](https://github.com/kgns/weapons) (Optional)
 
-## Installations:
+## Installation:
 1) Add the above requirement plugin(s) in your server.
 2) Add the following to addons/sourcemod/translations/store.phrases.txt
 ```
