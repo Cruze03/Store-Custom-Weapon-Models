@@ -24,6 +24,7 @@ int g_eCustomModel[STORE_MAX_ITEMS][CustomModel];
 int g_iCustomModels = 0;
 
 int g_iActive[MAXPLAYERS+1];
+char g_sKnife[MAXPLAYERS+1][64];
 bool g_bWeapons;
 
 public Plugin myinfo =
@@ -31,7 +32,7 @@ public Plugin myinfo =
 	name = "Store Custom Weapon Models",
 	author = "Mr.Derp & Franc1sco franug | Zephyrus Store Module & bbs.93x.net | KGNS Weapons Support & Cruze",
 	description = "Store Custom Weapon Models for specific weapon",
-	version = "3.1fix",
+	version = "3.2",
 	url = "http://bbs.93x.net | http://steamcommunity.com/profiles/76561198132924835"
 }
 
@@ -39,7 +40,6 @@ public APLRes AskPluginLoad2(Handle myself, bool late, char[] error, int err_max
 {
 	MarkNativeAsOptional("Weapons_GetClientKnife");
 	MarkNativeAsOptional("Weapons_SetClientKnife");
-	MarkNativeAsOptional("Weapons_RefreshClient");
 	return APLRes_Success;
 }
 
@@ -149,6 +149,7 @@ public int CustomModelConfig(Handle &kv, int itemid)
 public void OnClientPutInServer(int client)
 {
 	g_iActive[client] = -1;
+	g_sKnife[client][0] = '\0';
 }
 
 public int CustomModelEquip(int client, int id)
@@ -161,6 +162,7 @@ public int CustomModelEquip(int client, int id)
 		Weapons_GetClientKnife(client, buffer, sizeof(buffer));
 		if(strcmp(buffer, "weapon_knife") != 0)
 		{
+			strcopy(g_sKnife[client], sizeof(g_sKnife), buffer);
 			Weapons_SetClientKnife(client, "weapon_knife", false);
 		}
 	}
@@ -187,12 +189,10 @@ public int CustomModelRemove(int client, int id)
 	
 	if(g_bWeapons && strcmp(g_eCustomModel[m_iData][weaponentity], "weapon_knife") == 0)
 	{
-		Weapons_RefreshClient(client);
-		char buffer[64];
-		Weapons_GetClientKnife(client, buffer, sizeof(buffer));
-		if(strcmp(buffer, "weapon_knife") != 0)
+		if(g_sKnife[client][0])
 		{
-			Weapons_SetClientKnife(client, buffer, false);
+			Weapons_SetClientKnife(client, g_sKnife[client], false);
+			g_sKnife[client][0] = '\0';
 		}
 	}
 	
