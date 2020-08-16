@@ -32,7 +32,7 @@ public Plugin myinfo =
 	name = "Store Custom Weapon Models",
 	author = "Mr.Derp & Franc1sco franug | Zephyrus Store Module & bbs.93x.net | KGNS Weapons Support & Cruze",
 	description = "Store Custom Weapon Models for specific weapon",
-	version = "3.2",
+	version = "3.2fix",
 	url = "http://bbs.93x.net | http://steamcommunity.com/profiles/76561198132924835"
 }
 
@@ -213,6 +213,7 @@ public Action Weapons_OnClientKnifeSelectPre(int client, int knifeId, char[] kni
 	{
 		return Plugin_Continue;
 	}
+	strcopy(g_sKnife[client], sizeof(g_sKnife), knifeName);
 	PrintToChat(client, "[SM] You can't change your knife with custom knife model equipped in store!");
 	return Plugin_Handled;
 }
